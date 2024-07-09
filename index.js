@@ -10,6 +10,10 @@ app.use(bodyParser.json())
 
 const secret = "abcdefg";
 
+app.get("/",(req,res)=>{
+    res.send("Backend of blog app");
+})
+
 app.post('/register', async (req, res) => {
     const userData = new userModel({
         username: req.body.username,
